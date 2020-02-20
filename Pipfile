@@ -7,6 +7,7 @@ verify_ssl = true
 autopep8 = "*"
 flake8 = "*"
 mypy = "*"
+black = "*"
 
 [packages]
 
@@ -16,6 +17,9 @@ python_version = "3.7"
 [scripts]
 start = "python main.py"
 test = "python -m unittest discover -v"
-format = "autopep8 -ivr ."
+format = "black ."
 lint = "flake8 --show-source ."
 vet = "mypy <<PROJECT>>"
+
+[pipenv]
+allow_prereleases = true
